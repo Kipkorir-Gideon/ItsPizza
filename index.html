@@ -55,7 +55,7 @@
                     <div class="col-md-6">
                         <div class="forrm-group">
                             <label for="crust">Crust</label><br>
-                                <select class="selectpiicker" name="" id="">
+                            <select class="selectpiicker" name="" id="">
                                 <option disabled selected value>Select crust</option>
                                 <option value="120">Crispy @120</option>
                                 <option value="150">Stuffed @150</option>
@@ -65,14 +65,13 @@
                     </div>
                 </div>
                 <div class="form-group text-center">
-                    <h2>Choose Toppings</h2>
+                    <label for="toppings">Toppings</label><br>
                     <input type="checkbox" checked>Cheese
                     <input type="checkbox">Mushrooms
                     <input type="checkbox">Pepperoni
                     <input type="checkbox">Onions
                     <input type="checkbox">Sausage 
-                </div>
-                <div>
+                    <br>
                     <button class="btn btn-success mt-4" type="submit" id="submitOrder">Submit Order</button>
                 </div>
             </form>
@@ -92,6 +91,25 @@
                             <option value="no">No</option>
                         </select>
                     </div>
+                    <button id="" class="btn btn-primary" type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="deliveryYes">
+                <h2>Enter your details below.</h2>
+                <form action="">
+                    <div class="form-group">
+                        <label for="name">Name</label><br>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label><br>
+                        <input type="text" class="form-control" id="phone" placeholder="Enter your number">
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location</label><br>
+                        <input type="text" class="form-control" id="location" placeholder="Your location">
+                    </div>
+                    <button id="locationYes" class="btn btn-success" type="button">Submit Your Details</button>
                 </form>
             </div>
         </section>
