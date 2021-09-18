@@ -1,11 +1,11 @@
 function Order(size, crust, toppings) {
-    this.size = size;
-    this.crust = crust;
-    this.toppings = toppings;
+    this.sizeCost = size;
+    this.crustCost = crust;
+    this.toppingsCost = toppings;
 }
 
 Order.prototype.orderCost = function() {
-    return this.size + this.crust + this.toppings;
+    return this.sizeCost + this.crustCost + this.toppingsCost;
 }
 
 
@@ -16,8 +16,46 @@ $(document).ready(function() {
     $("form#new-order").submit(function(event) {
         event.preventDefault();
 
-        var inputtedSize = $("select#selection1 option:selected").val();
-        var inputtedCrust = $("select#selection2 option:selected").val();
-        var inputtedTopping = $("#selection3 input:checked").val();
+        var size = $("#selection1").val();
+        var crust = $("#selection2").val();
+        var toppings = $("#selection3").val();
+        var sizeCost = 0;
+        var crustCost = 0;
+        var toppingsCost = 0;
+        if(size == "small") {
+            sizeCost += 320;
+        }
+        else if(size == "medium") {
+            sizeCost += 440;
+        }
+        else if(size == "large") {
+            sizeCost += 600;
+        }
+
+        if(crust == "crispy") {
+            crustCost += 120;
+        }
+        else if(crust == "stuffed") {
+            crustCost += 150;
+        }
+        else if(crust == "gluten-free") {
+            crustCost += 100;
+        }
+
+        if(toppings == "cheese") {
+            toppingsCost += 60;
+        }
+        else if(toppings == "mushroom") {
+            toppingsCost += 70;
+        }
+        else if(toppings == "pepperoni") {
+            toppingsCost += 80;
+        }
+        if(toppings == "onion") {
+            toppingsCost += 50;
+        }
+        if(toppings == "sausage") {
+            toppingsCost += 80;
+        }
     })
 })
