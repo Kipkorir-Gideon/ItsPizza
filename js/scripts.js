@@ -61,5 +61,16 @@ $(document).ready(function () {
             '</td><td id="quantity">' + quantity +
             '</td><td id="total">' + newOrder.orderCost()*quantity +
             '</td></tr>')
+        
+            
+        
+    })
+
+    $("#location").click(function(event) {
+        event.preventDefault();
+        var delivery = $("#delivery").val();
+        if(delivery == "yes"){
+            $(".deliveryYes").show();
+        }
     })
 })
