@@ -4,7 +4,7 @@
     background-size: 100% 100%;
 }
 
-.deliveryYes, .deliveryNo {
+.deliveryYes, .deliveryNo, #checkout{
     display: none;
 }
 
