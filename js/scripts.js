@@ -80,4 +80,10 @@ $(document).ready(function () {
             $(".delivery").hide();
         }
     })
+
+    $("#locationYes").click(function() {
+        var name = $("input#name").val();
+        var phone = $("input#phone").val();
+        var location = $("input#userLocation").val();
+    })
 })
