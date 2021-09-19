@@ -41,10 +41,10 @@
             <br><br>
             <form action="" id="new-order">
                 <div class="row">
-                    <div class="col-md-6 text-center">
+                    <div class="col-md-3 text-center">
                         <div class="form-group">
                             <label for="size">Size</label><br>
-                            <select class="selectpicker" name="" id="selection1">
+                            <select class="selectpicker" name="" id="selection1" required>
                                 <option disabled selected value>Select size</option>
                                 <option value="small">Small @320</option>
                                 <option value="medium">Medium @440</option>
@@ -52,10 +52,10 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-md-6 text-center">
+                    <div class="col-md-3 text-center">
                         <div class="forrm-group">
                             <label for="crust">Crust</label><br>
-                            <select class="selectpiicker" name="" id="selection2">
+                            <select class="selectpiicker" name="" id="selection2" required>
                                 <option disabled selected value>Select crust</option>
                                 <option value="crispy">Crispy @120</option>
                                 <option value="stuffed">Stuffed @150</option>
@@ -63,21 +63,53 @@
                             </select>
                         </div>
                     </div>
-                </div><br><br>
-                <div class="form-group text-center" id="selection3">
-                    <label for="toppings">Toppings</label><br>
-                    <input type="radio" value="cheese">Cheese
-                    <input type="radio" value="mushroom">Mushrooms
-                    <input type="radio" value="pepperoni">Pepperoni
-                    <input type="radio" value="onion">Onions
-                    <input type="radio" value="sausage">Sausage 
-                    <br>
-                    <button class="btn btn-success mt-4" type="submit" id="submitOrder">Submit Order</button>
+                    <div class="col-md-3 text-center">
+                        <div class="form-group">
+                            <label for="toppings">Toppings</label><br>
+                            <select name="" id="" class="selectpicker" id="selection3" required>
+                                <option disabled selected value>Select toppings</option>
+                                <option value="cheese">Cheese</option>
+                                <option value="mushroom">Mushrooms</option>
+                                <option value="pepperoni">Pepperoni</option>
+                                <option value="onion">Onion</option>
+                                <option value="sausage">Sausage</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="form-group">
+                            <label for="quantity">Quantity</label><br>
+                            <input type="number" id="quantities" value="quantity" placeholder="Quantity" min="1" max="5" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="makeOrder text-center">
+                    <button class="btn btn-success mt-5" type="submit" id="submitOrder">Order</button>
                 </div>
             </form>
             <br><br>
             <div class="displayOrder">
-
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Size</th>
+                            <th>Crust</th>
+                            <th>Toppings</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="size"></td>
+                            <td id="crust"></td>
+                            <td id="toppings"></td>
+                            <td id="quantity"></td>
+                            <td id="total"></td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
 
             </div>
             <div class="delivery text-center">
@@ -85,7 +117,7 @@
                 <form action="">
                     <div class="form-group">
                         <label for="delivery">Do you want your pizza delivered to you?</label><br>
-                        <select class="selectpicker" name="" id="">
+                        <select class="selectpicker" name="" id="" required>
                             <option disabled selected value>Select your option</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
@@ -99,15 +131,15 @@
                 <form action="">
                     <div class="form-group">
                         <label for="name">Name</label><br>
-                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone Number</label><br>
-                        <input type="text" class="form-control" id="phone" placeholder="Enter your number">
+                        <input type="text" class="form-control" id="phone" placeholder="Enter your number" required>
                     </div>
                     <div class="form-group">
                         <label for="location">Location</label><br>
-                        <input type="text" class="form-control" id="location" placeholder="Your location">
+                        <input type="text" class="form-control" id="location" placeholder="Your location" required>
                     </div>
                     <button id="locationYes" class="btn btn-success" type="button">Submit Your Details</button>
                 </form>
@@ -118,11 +150,11 @@
                 <form action="">
                     <div class="form-group">
                         <label for="name">Name</label><br>
-                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone Number</label><br>
-                        <input type="text" class="form-control" id="phone" placeholder="Enter your number">
+                        <input type="text" class="form-control" id="phone" placeholder="Enter your number" required>
                     </div>
                     <button id="locationYes" class="btn btn-success" type="button">Submit Your Details</button>
                 </form>

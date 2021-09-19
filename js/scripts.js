@@ -13,12 +13,13 @@ Order.prototype.orderCost = function() {
 
 
 $(document).ready(function() {
-    $("form#new-order").submit(function(event) {
+    $("#submitOrder").submit(function(event) {
         event.preventDefault();
 
         var size = $("#selection1").val();
         var crust = $("#selection2").val();
         var toppings = $("#selection3").val();
+        var quantity = $("#quantities").val();
         var sizeCost = 0;
         var crustCost = 0;
         var toppingsCost = 0;
@@ -57,5 +58,7 @@ $(document).ready(function() {
         if(toppings == "sausage") {
             toppingsCost += 80;
         }
+
+        var newOrder = new Order(sizeCost, crustCost, toppingsCost);
     })
 })
