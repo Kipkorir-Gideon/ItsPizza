@@ -7,3 +7,7 @@
 .deliveryYes, .deliveryNo {
     display: none;
 }
+
+#displayOrder {
+    display: none;
+}

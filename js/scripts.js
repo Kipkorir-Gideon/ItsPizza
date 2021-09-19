@@ -62,6 +62,8 @@ $(document).ready(function () {
             '</td><td id="total">' + newOrder.orderCost()*quantity +
             '</td></tr>')
         
+        $("#displayOrder").show();
+        $("#new-order").hide();
             
         
     })
@@ -71,9 +73,11 @@ $(document).ready(function () {
         var delivery = $("#delivery").val();
         if(delivery == "yes"){
             $(".deliveryYes").show();
+            $(".delivery").hide();
         }
         else if(delivery == "no"){
             $(".deliveryNo").show();
+            $(".delivery").hide();
         }
     })
 })
