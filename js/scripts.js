@@ -98,6 +98,8 @@ $(document).ready(function () {
     $("#locationNo").click(function(event) {
         event.preventDefault();
 
+        $("#displayOrder").hide();
+        $(".deliveryNo").hide();
         var name = $("input#name").val();
         var phone = $("input#phone").val();
 
