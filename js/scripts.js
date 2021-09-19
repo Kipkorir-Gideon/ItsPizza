@@ -100,5 +100,7 @@ $(document).ready(function () {
 
         var name = $("input#name").val();
         var phone = $("input#phone").val();
+
+        $("#forDelivery").append("Hello " + name + ", thank you for shopping with us. You can pick your order at our store.")
     })
 })
