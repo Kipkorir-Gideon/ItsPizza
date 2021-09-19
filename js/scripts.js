@@ -4,7 +4,7 @@ function Order(size, crust, toppings) {
     this.toppingsCost = toppings;
 }
 
-Order.prototype.orderCost = function() {
+Order.prototype.orderCost = function () {
     return this.sizeCost + this.crustCost + this.toppingsCost;
 }
 
@@ -12,8 +12,8 @@ Order.prototype.orderCost = function() {
 
 
 
-$(document).ready(function() {
-    $("#submitOrder").submit(function(event) {
+$(document).ready(function () {
+    $("#submitOrder").click(function (event) {
         event.preventDefault();
 
         var size = $("#selection1").val();
@@ -23,42 +23,43 @@ $(document).ready(function() {
         var sizeCost = 0;
         var crustCost = 0;
         var toppingsCost = 0;
-        if(size == "small") {
+        if (size == "small") {
             sizeCost += 320;
-        }
-        else if(size == "medium") {
+        } else if (size == "medium") {
             sizeCost += 440;
-        }
-        else if(size == "large") {
+        } else if (size == "large") {
             sizeCost += 600;
         }
 
-        if(crust == "crispy") {
+        if (crust == "crispy") {
             crustCost += 120;
-        }
-        else if(crust == "stuffed") {
+        } else if (crust == "stuffed") {
             crustCost += 150;
-        }
-        else if(crust == "gluten-free") {
+        } else if (crust == "gluten-free") {
             crustCost += 100;
         }
 
-        if(toppings == "cheese") {
+        if (toppings == "cheese") {
             toppingsCost += 60;
-        }
-        else if(toppings == "mushroom") {
+        } else if (toppings == "mushroom") {
             toppingsCost += 70;
-        }
-        else if(toppings == "pepperoni") {
+        } else if (toppings == "pepperoni") {
             toppingsCost += 80;
         }
-        if(toppings == "onion") {
+        if (toppings == "onion") {
             toppingsCost += 50;
         }
-        if(toppings == "sausage") {
+        if (toppings == "sausage") {
             toppingsCost += 80;
         }
 
         var newOrder = new Order(sizeCost, crustCost, toppingsCost);
+
+        $("#displayOrder").append('<tr><td id="size">' + size +
+            '</td><td id="crust">' + crust +
+            '</td><td id="toppings">' + toppings +
+            '</td><td id="quantity">' + quantity +
+            '</td><td id="total">' + newOrder.orderCost()*quantity +
+            '</td></tr>')
     })
 })
