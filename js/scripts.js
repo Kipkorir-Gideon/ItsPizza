@@ -85,9 +85,14 @@ $(document).ready(function () {
     $("#locationYes").click(function(event) {
         event.preventDefault();
 
+        $("#displayOrder").hide();
+        $(".deliveryYes").hide();
         var name = $("input#name").val();
         var phone = $("input#phone").val();
         var location = $("input#userLocation").val();
+        // var totalCost = newOrder.orderCost()*quantity + 200;
+
+        $("#forDelivery").append("Hello " + name + ", we have received your order and it will be delivered to " + location + " at a cost of Ksh 200.")
     })
 
     $("#locationNo").click(function(event) {
