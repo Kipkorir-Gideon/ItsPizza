@@ -72,5 +72,8 @@ $(document).ready(function () {
         if(delivery == "yes"){
             $(".deliveryYes").show();
         }
+        else if(delivery == "no"){
+            $(".deliveryNo").show();
+        }
     })
 })
