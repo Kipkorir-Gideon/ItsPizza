@@ -92,7 +92,8 @@ $(document).ready(function () {
         var location = $("input#userLocation").val();
         // var totalCost = newOrder.orderCost()*quantity + 200;
 
-        $("#forDelivery").append("Hello " + name + ", we have received your order and it will be delivered to " + location + " at a cost of Ksh 200.")
+        $("#forDelivery").append("Hello " + name + ", we have received your order and it will be delivered to " + location + " at a cost of Ksh 200.");
+        $("#checkout").show();
     })
 
     $("#locationNo").click(function(event) {
@@ -103,6 +104,7 @@ $(document).ready(function () {
         var name = $("input#name").val();
         var phone = $("input#phone").val();
 
-        $("#forDelivery").append("Hello " + name + ", thank you for shopping with us. You can pick your order at our store.")
+        $("#forDelivery").append("Hello " + name + ", thank you for shopping with us. You can pick your order at our store.");
+        $("#checkout").show();
     })
 })
