@@ -70,6 +70,7 @@ $(document).ready(function () {
 
     $("#location").click(function(event) {
         event.preventDefault();
+
         var delivery = $("#delivery").val();
         if(delivery == "yes"){
             $(".deliveryYes").show();
@@ -81,9 +82,18 @@ $(document).ready(function () {
         }
     })
 
-    $("#locationYes").click(function() {
+    $("#locationYes").click(function(event) {
+        event.preventDefault();
+
         var name = $("input#name").val();
         var phone = $("input#phone").val();
         var location = $("input#userLocation").val();
+    })
+
+    $("#locationNo").click(function(event) {
+        event.preventDefault();
+
+        var name = $("input#name").val();
+        var phone = $("input#phone").val();
     })
 })
