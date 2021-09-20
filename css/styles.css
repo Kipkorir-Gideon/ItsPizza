@@ -10,6 +10,7 @@
 
 #displayOrder {
     display: none;
+    margin: auto;
 }
 
 .selectpicker, #quantities {
@@ -31,7 +32,8 @@
 }
 
 .table {
-    display: inline;
+    display: block;
+    text-align: start;
 }
 
 .social {
@@ -41,6 +43,10 @@
 .social a{
     margin-left: 5%;
     margin-right: 5%;
+}
+
+h2 {
+    color: rgb(206, 206, 7);
 }
 
 .yummy {

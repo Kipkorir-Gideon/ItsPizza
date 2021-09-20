@@ -10,11 +10,6 @@ Order.prototype.orderCost = function () {
 
 
 
-function totalAmount() {
-    var totalCost = (orderCost() * quantity )+ 200;
-    return totalCost;
-}
-
 
 
 
@@ -101,6 +96,11 @@ $(document).ready(function () {
         var name = $("input#name").val();
         var phone = $("input#phone").val();
         var location = $("input#userLocation").val();
+        
+        function totalAmount() {
+            var totalCost = (newOrder() * quantity )+ 200;
+            return totalCost;
+        }
 
 
         $("#forDelivery").append("Hello " + name + ", we have received your order and it will be delivered to " + location + " at an extra cost of Ksh 200.");
@@ -111,7 +111,7 @@ $(document).ready(function () {
 
             $("#yourName").text(name);
             $("#yourPhone").text(phone);
-            $("#orderPrice").text(total);
+            $("#orderPrice").text();
             $("#deliveryLocation").text(location);
             $("#totalAmount").text();
             $("#checkoutAlert").show();
