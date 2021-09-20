@@ -105,6 +105,19 @@ $(document).ready(function () {
 
         $("#forDelivery").append("Hello " + name + ", we have received your order and it will be delivered to " + location + " at an extra cost of Ksh 200.");
         $("#checkout").show();
+
+        $("#checkout").click(function(event) {
+            event.preventDefault();
+
+            $("#yourName").text(name);
+            $("#yourPhone").text(phone);
+            $("#orderPrice").text(total);
+            $("#deliveryLocation").text(location);
+            $("#totalAmount").text();
+            $("#checkoutAlert").show();
+            $("#locationYes").hide();
+            $(this).hide();
+        })
     })
 
     $("#locationNo").click(function(event) {
@@ -117,5 +130,7 @@ $(document).ready(function () {
 
         $("#forDelivery").append("Hello " + name + ", thank you for shopping with us. You can pick your order at our store.");
         $("#checkout").show();
+
+        
     })
 })
