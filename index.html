@@ -162,6 +162,48 @@
                     <button id="locationNo" class="btn btn-success" type="button">Submit Your Details</button>
                 </form>
             </div>
+
+            <div id="checkouAlert" class="alert alert-success alert-dismissible">
+                <strong>Success! Order Summary...This order is on its way to your location.</strong>
+                <table class="table table-dark">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th>Item</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Name:</td>
+                    <td><span id="userNameTwo"></span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Phone Number:</td>
+                    <td><span id="phoneTwo"></span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Order Price</td>
+                    <td>Ksh <span id="aggregatePrice"></span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Shipping Location</td>
+                    <td><span id="shippingArea"></span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>Delivery Cost</td>
+                    <td>Ksh <span id="shippingCost"></span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>Total Cost</td>
+                    <td>Ksh <span id="totalAmount"></span></td>
+                  </tr>
+                </table>
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+              </div>
             <button id="checkout" class="btn btn-warning" type="button">Checkout to see Order details</button>
         </section><br><br>
 
