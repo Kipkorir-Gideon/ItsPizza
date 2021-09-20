@@ -12,6 +12,28 @@
     display: none;
 }
 
+.selectpicker, #quantities {
+    padding: 8px;
+    width: 80%;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.selectpicker1 {
+    padding: 8px;
+    width: 30%;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+#submitOrder, #location {
+    width: 30%;
+}
+
+.table {
+    display: inline;
+}
+
 .social {
     margin-bottom: 20px;
 }
@@ -29,6 +51,12 @@
     font-style: italic;
     font-size: 3em;
     color: rgb(255, 0, 98);
+}
+
+#checkoutAlert, #checkoutOne {
+    text-align: left;
+    width: 70%;
+    margin: auto;
 }
 
 .footer {
