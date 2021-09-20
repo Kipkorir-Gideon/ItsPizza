@@ -20,3 +20,19 @@
     margin-left: 5%;
     margin-right: 5%;
 }
+
+.yummy {
+    padding: 10%;
+}
+
+.yummy p {
+    font-style: italic;
+    font-size: 3em;
+    color: rgb(255, 0, 98);
+}
+
+.footer {
+    background-color: rgb(59, 55, 55);
+    padding: 20px;
+    color: wheat;
+}
