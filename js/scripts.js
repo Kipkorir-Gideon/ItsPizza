@@ -10,6 +10,13 @@ Order.prototype.orderCost = function () {
 
 
 
+function totalAmount() {
+    var totalCost = (orderCost() * quantity )+ 200;
+    return totalCost;
+}
+
+
+
 
 
 $(document).ready(function () {
@@ -55,16 +62,20 @@ $(document).ready(function () {
 
         var newOrder = new Order(sizeCost, crustCost, toppingsCost);
 
-        $("#displayOrder").append('<tr><td id="size">' + size +
+
+        $("#displayOrder").append('<table class="table">' + 
+            '<tbody>' + '<tr><td id="size">' + size +
             '</td><td id="crust">' + crust +
             '</td><td id="toppings">' + toppings +
             '</td><td id="quantity">' + quantity +
             '</td><td id="total">' + newOrder.orderCost()*quantity +
-            '</td></tr>')
+            '</td></tr>' + 
+            '</tbody>' + 
+            '</table>')
         
         $("#displayOrder").show();
         $("#new-order").hide();
-            
+        
         
     })
 
@@ -90,9 +101,9 @@ $(document).ready(function () {
         var name = $("input#name").val();
         var phone = $("input#phone").val();
         var location = $("input#userLocation").val();
-        // var totalCost = newOrder.orderCost()*quantity + 200;
 
-        $("#forDelivery").append("Hello " + name + ", we have received your order and it will be delivered to " + location + " at a cost of Ksh 200.");
+
+        $("#forDelivery").append("Hello " + name + ", we have received your order and it will be delivered to " + location + " at an extra cost of Ksh 200.");
         $("#checkout").show();
     })
 
