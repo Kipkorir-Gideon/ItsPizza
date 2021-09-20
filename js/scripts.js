@@ -131,6 +131,15 @@ $(document).ready(function () {
         $("#forDelivery").append("Hello " + name + ", thank you for shopping with us. You can pick your order at our store.");
         $("#checkout").show();
 
-        
+        $("#checkout").click(function(event) {
+            event.preventDefault();
+
+            $("#yourTotal").text();
+            $("#nameOne").text(name);
+            $("#phoneOne").text(phone);
+            $("#checkoutOne").show();
+            $("#locationNo").hide();
+            $(this).hide();
+        });
     })
 })
