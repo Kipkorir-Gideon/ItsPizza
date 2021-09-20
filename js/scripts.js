@@ -112,8 +112,8 @@ $(document).ready(function () {
 
         $("#displayOrder").hide();
         $(".deliveryNo").hide();
-        var name = $("input#name").val();
-        var phone = $("input#phone").val();
+        var name = $("input#name1").val();
+        var phone = $("input#phone1").val();
 
         $("#forDelivery").append("Hello " + name + ", thank you for shopping with us. You can pick your order at our store.");
         $("#checkout").show();
