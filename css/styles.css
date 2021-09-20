@@ -11,3 +11,12 @@
 #displayOrder {
     display: none;
 }
+
+.social {
+    margin-bottom: 20px;
+}
+
+.social a{
+    margin-left: 5%;
+    margin-right: 5%;
+}
